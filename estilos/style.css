@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:"Maximilian";
+    src: url("../fonte/Maximilian.ttf") format("truetype");
+}
+
+@font-face{
+    font-family:"Maximilian Zier";
+    src: url("../fonte/MaximilianZierbuchstaben.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Leader" ;
+    src: url("../fonte/Leander.ttf") format("truetype");
+}
+
+*{
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    font-family:  var(--fonteDestaque),var(--fontePadrao);
+    font-size: 16px;
+}
+
+:root{
+    --cor1:#141C24;
+    --cor2:#3F3F46;
+    --cor3:#472F1D;
+    --cor4_0:#E45D0B;
+    --cor4_1:#FFDE59;
+    --cor5:#660500;
+    --corFundo:#DFD9BB;
+    --corFonte:#604E3D;
+    --corDecorado:#F66350;
+
+    --fontePadrao:times, serif;
+    --fonteDestaque:"Leader";
+    --fonteDecorado:"Maximilian";
+}
+
+body{
+    background-color: var(--cor1);
+    position: relative;
+    margin: auto;
+}
+
+nav{
+    max-width:100%;
+    padding: 5px;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.25);
+    background-color: var(--cor2);
+}
+
+nav a{
+    display:inline-block;
+    padding: 5px 15px;
+    min-width: 50px;
+    margin: 1% 2%;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration:0.5s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: var(--corFundo);
+    background-color: var(--cor1);
+}
+
+nav a:hover{
+    color: var(--cor1);
+    background-color: var(--corFundo);
+}
+
+header{
+    width: 100%;
+    min-height: 150px;
+    background-image: linear-gradient(180deg, var(--cor4_1), var(--cor4_0));
+    text-align: center;
+    padding-top: 2em;
+    border-radius: 0px 0px 5% 5%;    
+}
+
+header > h1{
+    font-family:var(--fonteDecorado);
+    font-size: 3em;
+    width: 300px;
+    margin:auto;
+    color:white;
+    text-shadow: 2px 2px 1px var(--cor4_0);
+}
+
+body section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+
+}
+section .right{ 
+    order: 3;
+}
+
+section aside{
+    height: 500px;
+    max-width: 400px;
+    min-width: 290px;
+    padding: 20px;
+    background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
+    border-radius: 5px;
+}
+aside h3{
+    font-size: 1.3em;
+}
+
+ main{
+    order: 2;
+    min-width:270px;
+    max-width:1000px ;
+    background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 5px rgb(0, 0, 0, 0.25);
+    margin: 0px 10% 20px 10%;
+}
+
+main article{
+    padding: 20px;
+}
+
+main h1{
+    font-size: 1.8em;
+    background: transparent url("../imagens/red_flag.png") no-repeat center center/ contain;   
+}
+
+main h2{
+    font-size: 1.5em;
+}
+
+hr{
+    border: 2px solid var(--cor5);
+    margin: 10px 0px;
+}
+
+article p {
+    text-indent: 2.5em;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+img{
+    width: 100%;
+    margin: 20px auto;
+}
+
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: var(--cor3);
+    clear:both;
+    margin-top: 20px;
+}
+
+footer section{
+    width: 30%;
+    height: 200px;
+    background-color: var(--cor5);
+
+}
