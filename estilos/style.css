@@ -15,18 +15,11 @@
     src: url("../fonte/Leander.ttf") format("truetype");
 }
 
-*{
-    font-weight: normal;
-    margin: 0px;
-    padding: 0px;
-    font-family:  var(--fonteDestaque),var(--fontePadrao);
-    font-size: 16px;
-}
 
 :root{
     --cor1:#141C24;
     --cor2:#3F3F46;
-    --cor3:#472F1D;
+    --cor3:#231F1C;
     --cor4_0:#E45D0B;
     --cor4_1:#FFDE59;
     --cor5:#660500;
@@ -39,17 +32,30 @@
     --fonteDecorado:"Maximilian";
 }
 
+*{
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    font-family:  var(--fonteDestaque),var(--fontePadrao);
+    font-size: 16px;
+}
+
+/*--------------*/
+
 body{
-    background-color: var(--cor1);
+    background-image: linear-gradient(to right,black, var(--cor3),black );
     position: relative;
     margin: auto;
 }
 
+/*--------------*/
+
 nav{
-    max-width:100%;
+    max-width:270px;
     padding: 5px;
     box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.25);
     background-color: var(--cor2);
+    border-bottom-right-radius: 5px;
 }
 
 nav a{
@@ -70,12 +76,13 @@ nav a:hover{
     background-color: var(--corFundo);
 }
 
+/*--------------*/
+
 header{
     width: 100%;
     min-height: 150px;
     background-image: linear-gradient(180deg, var(--cor4_1), var(--cor4_0));
     text-align: center;
-    padding-top: 2em;
     border-radius: 0px 0px 5% 5%;    
 }
 
@@ -88,38 +95,57 @@ header > h1{
     text-shadow: 2px 2px 1px var(--cor4_0);
 }
 
-body section{
+/*--------------*/
+
+body > section{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-
-
 }
+
+/*--------------*/
+
 section .right{ 
     order: 3;
 }
+section a{
+    text-decoration: none;
+    color: var(--cor4_0);
+    padding: 2px;
+    border-radius: 10%;
+}
+section a:hover{
+    background-color: #141C24;
+    color: var(--corFundo);
+}
 
 section aside{
-    height: 500px;
+    height: 740px;
     max-width: 400px;
     min-width: 290px;
-    padding: 20px;
     background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
     border-radius: 5px;
 }
+
+aside article{
+    padding: 20px;
+}
+
 aside h3{
     font-size: 1.3em;
 }
 
- main{
+/*--------------*/
+
+main{
     order: 2;
-    min-width:270px;
+    min-width:290px;
     max-width:1000px ;
     background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
     border-radius: 5px;
     box-shadow: 0px 5px 5px 5px rgb(0, 0, 0, 0.25);
-    margin: 0px 10% 20px 10%;
+    margin: 0px 5% 20px 5%;
 }
 
 main article{
@@ -136,15 +162,16 @@ main h2{
 }
 
 hr{
-    border: 2px solid var(--cor5);
-    margin: 10px 0px;
+    border:2px solid var(--cor5);
+    margin:10px 0px;
 }
 
 article p {
-    text-indent: 2.5em;
+    text-indent: 2em;
     font-size: 1.2em;
     text-align: justify;
     line-height: 1.5em;
+    margin-bottom: 10px;
 }
 
 img{
@@ -152,18 +179,85 @@ img{
     margin: 20px auto;
 }
 
+.image_pq{
+    display: block;
+    width: 60%;
+    text-align: center;
+}
+
+div.conteiner{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+/*--------------*/
 
 footer{
     width: 100%;
-    height: 300px;
+    min-height: 200px;
     background-color: var(--cor3);
     clear:both;
     margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer section{
-    width: 30%;
-    height: 200px;
+    width: 60%;
     background-color: var(--cor5);
+    border-radius: 50px;
+    padding: 20px;
+    color: var(--corFonte);
+    text-align: center;
+    
+}
 
+footer section.base{
+    align-self: flex-end;
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    color: var(--corFonte);
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+footer aside{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 150px ;
+    height: 125px;
+    background-color: var(--cor5);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: var(--corFonte);
+}
+footer aside p{
+    display: block;
+}
+
+footer aside img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+footer aside img:hover{
+    background-color: var(--corDecorado);
+}
+
+footer span{
+    font-family: var(--fonteDecorado);
+    font-size: 1.5em;
 }
