@@ -121,7 +121,7 @@ section a:hover{
 }
 
 section aside{
-    height: 740px;
+    height: 770px;
     max-width: 400px;
     min-width: 290px;
     background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
