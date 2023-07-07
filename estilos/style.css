@@ -100,6 +100,7 @@ header > h1{
 body > section{
     display: flex;
     justify-content: space-evenly;
+    position: relative;
     flex-wrap: wrap;
     margin-top: 30px;
 
@@ -108,7 +109,9 @@ body > section{
 /*--------------*/
 
 section .right{ 
-    order: 3;
+    position: sticky;
+    top: 0;
+    order: 2;
 }
 section a{
     text-decoration: none;
@@ -121,16 +124,21 @@ section a:hover{
     color: var(--corFundo);
 }
 
-section aside{
+section > aside{
     height: 770px;
     max-width: 400px;
     min-width: 290px;
     background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
     border-radius: 5px;
+    margin-bottom: 30px;
 }
 
 aside article{
     padding: 20px;
+}
+
+aside article img{
+    border-radius: 10px;
 }
 
 aside h3{
@@ -140,7 +148,7 @@ aside h3{
 /*--------------*/
 
 main{
-    order: 2;
+    order: 1;
     min-width:290px;
     max-width:1000px ;
     background: var(--corFundo) url("../imagens/fundo.jpg") no-repeat center center/ cover fixed;
@@ -184,6 +192,7 @@ img{
     display: block;
     width: 60%;
     text-align: center;
+    
 }
 
 /*--------------*/
